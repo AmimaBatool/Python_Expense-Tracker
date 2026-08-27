@@ -27,9 +27,29 @@ def view_expenses():
     else: 
         for index, expense in enumerate(expense_List, 1):
             print("No. - NAME - AMOUNT - DATE - CATEGORY - DESCRIPTION ")
-            print(f"{index}: {expense['Expense']} - {expense['Amount']} - {expense['Date']} - {expense['Category']} - {expense['Description']}")
+            print(f"{index}. {expense['Expense']} - {expense['Amount']} - {expense['Date']} - {expense['Category']} - {expense['Description']}")
             print()
     print()
+
+
+#Function to Update an Expense
+def update_expense():
+    index = int(input("Enter the expense number you want to update: ")) - 1
+
+    if 0 <= index < len(expense_List):
+        expense = expense_List[index]
+
+        expense["Expense"] = input("Enter new expense name: ")
+        expense["Date"] = input("Enter new date (MM DD, YYYY): ")
+        expense["Category"] = input("Enter new category: ")
+        expense["Amount"] = float(input("Enter new amount: "))
+        expense["Description"] = input("Enter new description: ")
+        print()
+        print("Expense updated successfully!!")
+        print()
+    else:
+        print("Invalid expense number!")
+        print()
 
 
 #Function to view Total Spending
@@ -49,8 +69,9 @@ def menu():
         print("----Main Menu----")
         print("1. Add a New Expense")
         print("2. View all Expenses")
-        print("3. View Total Spending")
-        print("4. Exit")
+        print("3. Update an Expense")
+        print("4. View Total Spending")
+        print("5. Exit")
         print()
 
         choice = input("Enter your choice: ")
@@ -60,8 +81,10 @@ def menu():
         elif choice =="2":
             view_expenses()
         elif choice == "3":
-            view_total_spending()
+            update_expense()
         elif choice =="4":
+            view_total_spending()
+        elif choice =="5":
             print("Exiting the application....")
             print()
             exit()
