@@ -1,9 +1,8 @@
 Title: Expense Tracker Application
 
-Expense Tracker Application is a simple command-line application developed by using Python. This program allows users to create a list of daily tasks by adding new tasks, viewing tasks, removing tasks and marking tasks as completed. This project is about data management and teaches us to store multiple items in a single variable. This project helps to practice fundamental python concepts and build a practical beginner level application.
+Expense Tracker Application is a simple command-line application developed by using Python. This program allows users to record, view, update and manage their daily expenses. This project is about Data Accumulation and helps to build a practical beginner level application.
 
 Features:
-
 Add a New Task.
 View all task with their status.
 Remove the task from the list.
