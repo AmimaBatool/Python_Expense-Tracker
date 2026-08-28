@@ -63,6 +63,20 @@ def view_total_spending():
     print()
 
 
+#Function to Delete an Expense
+def remove_expense():
+    if len(expense_List) == 0:
+        print("No Expenses to Remove!")
+    else:
+        index = int(input("Enter the expense number you want to remove: ")) - 1
+        if 0 <= index < len(expense_List):
+            removed_expense = expense_List.pop(index)
+            print(f"Expense Removed: {removed_expense['Expense']}")
+        else:
+            print("Invalid expense number!")
+    print()
+
+
 #Function to display a menu
 def menu():
     while(True):
@@ -71,7 +85,8 @@ def menu():
         print("2. View all Expenses")
         print("3. Update an Expense")
         print("4. View Total Spending")
-        print("5. Exit")
+        print("5. Remove an Expense")
+        print("6. Exit")
         print()
 
         choice = input("Enter your choice: ")
@@ -85,6 +100,8 @@ def menu():
         elif choice =="4":
             view_total_spending()
         elif choice =="5":
+            remove_expense()
+        elif choice =="6":
             print("Exiting the application....")
             print()
             exit()
