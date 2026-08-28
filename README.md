@@ -40,6 +40,7 @@ Expense Tracker Application is a simple command-line application developed by us
 
 **Sample Output:**
 - https://github.com/AmimaBatool/Python_Expense-Tracker/blob/main/SampleOutput_ExpenseTracker_Part-1.png
+- https://github.com/AmimaBatool/Python_Expense-Tracker/blob/main/SampleOutput_ExpenseTracker_Part-2.png
 - 
 
 **What I Learned:**
