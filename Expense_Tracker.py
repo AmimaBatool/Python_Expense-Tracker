@@ -13,7 +13,11 @@ def add_expense():
     category = input("Enter Category: ")
     expense_amount = float(input("Enter amount: ")) 
     description = input("Enter description(optional): ")
-    expense_List.append({"Expense": expense_name, "Date": date, "Category": category, "Amount": expense_amount, "Description": description})
+    expense_List.append({"Expense": expense_name, 
+                         "Date": date, 
+                         "Category": category, 
+                         "Amount": expense_amount,
+                         "Description": description})
     print()
     print("New Expense Added Successfully!!")
     print()
